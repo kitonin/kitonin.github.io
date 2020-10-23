@@ -1,15 +1,15 @@
 body {
 	padding: 1rem 2em;
 	margin: 0;
-	font-family: 'Vidaloka', serif;
+	font-family: 'Contrail One', cursive;
 	background-color: #f8f8f8;
 }
-h1 {
+h2 {
 	/*text-transform: uppercase;*/
 	text-align: center;
 	margin-bottom: 1.5rem;
 	line-height: 1;
-	font-size: 3em;
+	font-size: 2.5em;
 	font-weight: bold;
 }
 p {
