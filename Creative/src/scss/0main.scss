@@ -1,0 +1,31 @@
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+.btn-up {
+	padding: 0;
+	box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  display: none;
+  position: fixed;
+  top: 30px;
+  left: 1.5%;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 3rem;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: transparent;
+  display: block;
+  border: 1px solid #11749e;
+  text-decoration: none;
+  transform: rotate(180deg);
+  &:hover {
+  	color: #11749e;
+  	border-color: #fff;
+  }
+}

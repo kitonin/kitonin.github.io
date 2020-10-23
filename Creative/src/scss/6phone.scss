@@ -1,0 +1,61 @@
+.phone {
+	font-family:  'Oxygen', sans-serif;
+	background: transparent url('../images/phoneBack.png') left top no-repeat;
+	background-size: cover;
+	color: #fff;
+	&-wrap {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 30px;
+	}
+	&-container {
+		&_info {
+			padding-left: 0.625em;
+			padding-right: 4.375em;
+			padding-top: 13.75rem;
+			padding-bottom: 15rem;
+		}
+		&_picture {
+			justify-self: center;
+			align-self: center;
+      &-img {
+        width: 100%;
+      }
+		}
+	}
+	&-title {
+		font-size: 1.5625em;
+		line-height: 2.25rem;
+		text-transform: uppercase;
+	}
+	&-text {
+		font-size: 0.9375em;
+		line-height: 1.5rem;
+		margin-bottom: 4.125rem;
+	}
+	&-feature {
+		display: block;
+		background-color: #11749e;
+		text-transform: uppercase;
+		font-size: 0.9375em;
+		line-height: 1.5rem;
+		padding: 0.5rem 1.25em;
+		margin-bottom: 1.5rem;
+		box-sizing: border-box;
+		&_s {
+			width: 370px;
+		}
+		&_m {
+			width: 400px;
+		}
+		&_l {
+			width: 428px;
+		}
+	}
+}
+
+@media(max-width: 800px) {
+	.phone-container_picture-img {
+		display: none;
+	}
+}

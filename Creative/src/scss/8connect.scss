@@ -1,0 +1,83 @@
+.connect {
+  font-family: 'Oxygen', sans-serif;
+  color: #fff;
+  background: url('../images/C.png') center 150px no-repeat,
+              url('../images/contactBack.png') center no-repeat;
+  background-size: auto , cover;
+  padding-top: 13.75rem;
+  padding-bottom: 6.25rem;
+  &-title {
+    font-size: 2.3125em;
+    line-height: 2.8125rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 11.875rem;
+    margin-top: 0;
+  }
+  &-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 30px 40px;
+    grid-template-areas: 
+      "text email phone"
+      "main main main"
+      ". footer .";
+    &-submit {
+      grid-area: footer;
+      border: none;
+      outline: none;
+      background-color: #11749e;
+      width: 228px;
+      padding: 0.875rem 0;
+      align-self: center;
+      justify-self: center;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.5em;
+      line-height: 1;
+      cursor: pointer;
+      &:hover {
+        background-color: #fff;
+        color: #11749e;
+      }
+      &:focus {
+        outline: 1px solid #fff;
+      }
+    }
+    &-field {
+      font-size: 0.9375em;
+      line-height: 2.25rem;
+      background-color: transparent;
+      color: #fff;
+      padding-left: 1.25em;
+      outline: 1px solid #fff;
+      border: none;
+      &_text {
+        grid-area: text;
+      }
+      &_email {
+        grid-area: email;
+      }
+      &_phone {
+        grid-area: phone;
+      }
+      &_area {
+        grid-area: main;
+      }
+    }
+  }
+}
+
+@media(max-width: 730px)  {
+  .connect-form {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 1fr 5fr 1fr;
+    grid-template-areas: 
+      "text"
+      "email"
+      "phone"
+      "main"
+      "footer";
+  }  
+}

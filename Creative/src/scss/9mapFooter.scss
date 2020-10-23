@@ -1,0 +1,40 @@
+.map {
+	height: 400px;
+	&_iframe {
+		width: 100%;
+		outline: none;
+		border: none;
+	}
+}
+.footer {
+	font-family: 'Oxygen', sans-serif;
+	background-color: #222222;
+	color: #fff;
+	&-wrap {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		padding-top: 3.125rem;
+		padding-bottom: 2.8125rem;
+	}
+	&-copy {
+		font-size: 0.8215em;
+		line-height: 2.25rem;
+		justify-self: start;
+	}
+	&-design {
+		justify-self: end;
+	}
+}
+
+@media(max-width: 995px) {
+	.footer {
+		&-wrap {
+			justify-items: end;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		&-design {
+			justify-self: center;
+		}
+	}	
+}

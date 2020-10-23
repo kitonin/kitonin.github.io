@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Piano</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<!-- Piano -->
+	<ul class="piano">
+		<li class="key">
+			<span class="white-key" data-key="65" data-note="1F">A</span>
+			<span class="black-key" data-key="87" data-note="1Fs">W</span>
+		</li>
+		<li class="key">
+			<span class="white-key" data-key="83" data-note="1G">S</span>
+			<span class="black-key" data-key="69" data-note="1Gs">E</span>
+		</li>
+		<li class="key">
+			<span class="white-key" data-key="68" data-note="2A">D</span>
+		</li>
+		<li class="key">
+			<span class="white-key" data-key="70" data-note="2B">F</span>
+		</li>
+		<li class="key">
+			<span class="white-key" data-key="71" data-note="2C">G</span>
+			<span class="black-key" data-key="84" data-note="2Cs">T</span>
+		</li>
+		<li class="key">
+			<span class="white-key" data-key="72" data-note="2D">H</span>
+			<span class="black-key" data-key="89" data-note="2Ds">Y</span>
+		</li>
+		<li class="key">
+			<span class="white-key" data-key="74" data-note="2E">J</span>
+		</li>
+		<li class="key">
+			<span class="white-key" data-key="75" data-note="2F">K</span>
+			<span class="black-key" data-key="73" data-note="2Fs">I</span>
+		</li>
+		<li class="key">
+			<span class="white-key" data-key="76" data-note="2G">L</span>
+			<span class="black-key" data-key="79" data-note="2Gs">O</span>
+		</li>
+		<li class="key">
+			<span class="white-key" data-key="186" data-note="3A">:</span>
+			<span class="black-key" data-key="80" data-note="3As">P</span>
+		</li>
+		<li class="key">
+			<span class="white-key" data-key="222" data-note="3B">"</span>
+		</li>
+	</ul>
+	<!-- End Piano -->
+
+	<!-- audio -->
+	<audio data-key="65" src="sounds/f1.ogg"></audio>
+  	<audio data-key="87" src="sounds/f1s.ogg"></audio>
+  	<audio data-key="83" src="sounds/g1.ogg"></audio>
+  	<audio data-key="69" src="sounds/g1s.ogg"></audio>
+  	<audio data-key="68" src="sounds/a2.ogg"></audio>
+  	<audio data-key="70" src="sounds/b2.ogg"></audio>
+  	<audio data-key="71" src="sounds/c2.ogg"></audio>
+  	<audio data-key="84" src="sounds/c2s.ogg"></audio>
+  	<audio data-key="72" src="sounds/d2.ogg"></audio>
+  	<audio data-key="89" src="sounds/d2s.ogg"></audio>
+ 	<audio data-key="74" src="sounds/e2.ogg"></audio>
+ 	<audio data-key="75" src="sounds/f2.ogg"></audio>
+ 	<audio data-key="73" src="sounds/f2s.ogg"></audio>
+ 	<audio data-key="76" src="sounds/g2.ogg"></audio> 
+ 	<audio data-key="79" src="sounds/g2s.ogg"></audio> 
+  	<audio data-key="186" src="sounds/a3.ogg"></audio> 
+ 	<audio data-key="80" src="sounds/a3s.ogg"></audio> 
+ 	<audio data-key="222" src="sounds/b3.ogg"></audio>   
+	<!-- End audio -->
+
+	<script src='js/jquery-3.3.1.min.js'></script>
+	<script>
+		$(function() {
+  			$(this).keydown(function(event) {
+    			var key = $(this).find('.key span[data-key='+event.which+']'); 
+    			var audio = $(this).find('audio[data-key='+event.which+']')[0];
+    			key.toggleClass('active');
+    			if (!audio) return;
+    			audio.play();
+    			audio.currentTime = 0; 
+  			});
+  			$(this).keyup(function(event) {
+    			var key = $(this).find('.key span[data-key='+event.which+']');
+    			key.toggleClass('active');
+  			});
+		});
+	</script>
+
+</body>
+</html>
